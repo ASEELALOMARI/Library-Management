@@ -146,5 +146,24 @@ public class Library
             }
         }
 
+
+        // Displays the type of Notification used by the library.
+        public void PrintNotificationServiceInfo()
+        {
+
+            var notificationServiceType = _notificationService.GetType();
+            if(notificationServiceType == typeof(NotificationService.EmailNotificationService))
+            {
+                Console.WriteLine($"This library use: 'Email Notification Service'.");
+            }
+            else if(notificationServiceType == typeof(NotificationService.SMSNotificationService))
+            {
+                Console.WriteLine($"This library use: 'SMS Notification Service'.");
+            }
+            else{
+                Console.WriteLine($"Unknown Notification Service.");//todo throw
+            }
+        }
+
     }
 }

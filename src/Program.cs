@@ -94,6 +94,10 @@ internal class Program
         libraryWithSMS.DisplayListInfo(libraryWithSMS.getAllUser(10, 1));
         Console.WriteLine();
 
+        Console.WriteLine($"Notification Type:");
+        libraryWithEmail.PrintNotificationServiceInfo();
+        libraryWithSMS.PrintNotificationServiceInfo();
+
 
 
     }
